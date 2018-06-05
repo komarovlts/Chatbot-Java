@@ -16,23 +16,17 @@ import java.util.List;
  */
 public class Chatbot {
     
-    public List Log;
+    public String tiempoActual;
     
     public void Chatbot(){
-    TiempoActual tiempoActual = new TiempoActual();
-    Usuario usuarioUno = new Usuario();
-    Log posibleLog = new Log();
+    
+    
+        List listaLog = new ArrayList();
+        Usuario nuevoUsuario = new Usuario();
+        Log log = new Log(); 
         
-    tiempoActual.TiempoActual();
-        
-    System.out.println("Este chatbot te ayuda a realizar un pedido de homocinéticas");
-    System.out.println(posibleLog);
-        if(posibleLog.esLog(Log)){
-            Log.add(0,tiempoActual);
-            usuarioUno.setNombreUsuario("Omar");
-            Log.setLog(Log , usuarioUno.getNombreUsuario());
-            System.out.println(posibleLog);
-        }
+        System.out.println("Este chatbot te ayuda a realizar un pedido de homocinéticas");
+
     }
     
     public String TiempoActual(){

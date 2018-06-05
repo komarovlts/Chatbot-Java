@@ -1,0 +1,14 @@
+@startuml
+class chatbot.Chatbot
+class chatbot.Log
+class chatbot.Main
+class chatbot.Usuario
+class java.time.LocalDateTime
+class java.time.format.DateTimeFormatter
+class java.util.ArrayList
+class java.util.List
+chatbot.Chatbot ..> java.time.LocalDateTime
+chatbot.Chatbot ..> java.time.format.DateTimeFormatter
+chatbot.Chatbot ..> java.util.ArrayList
+chatbot.Chatbot ..> java.util.List
+@enduml

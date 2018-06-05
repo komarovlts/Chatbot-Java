@@ -10,29 +10,29 @@ package chatbot;
  * @author Omar Antonio Carrasco Escudero - Kömarøv
  */
 public class Usuario {
-    public String NombreUsuario;
-    public String PedidoUsuario;
+    public String nombreUsuario;
+    public String pedidoUsuario;
     
     public Usuario() {
-        this.NombreUsuario = "";
-        this.PedidoUsuario = "";
+        this.nombreUsuario = "";
+        this.pedidoUsuario = "";
     }
     
     public String getNombreUsuario(){
-        return NombreUsuario;
+        return nombreUsuario;
     }
     
     public String getPedidoUsuario(){
-        return PedidoUsuario;
+        return pedidoUsuario;
     }
     
-    public String setNombreUsuario(String NombreUsuarioEntrante){
-        NombreUsuario = NombreUsuarioEntrante;
-        return NombreUsuario;
+    public String setNombreUsuario(String nombreNuevoUsuario){
+        nombreUsuario = nombreNuevoUsuario;
+        return nombreUsuario;
     }
     
-    public String setPedidoUsuario(String PedidoUsuarioEntrante){
-        PedidoUsuario = PedidoUsuarioEntrante;
-        return PedidoUsuario;
+    public String setPedidoUsuario(String pedidoNuevoUsuario){
+        pedidoUsuario = pedidoNuevoUsuario;
+        return pedidoUsuario;
     }
 }

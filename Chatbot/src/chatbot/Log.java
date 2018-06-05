@@ -11,18 +11,30 @@ import java.util.*;
  *
  * @author Omar Antonio Carrasco Escudero - Kömarøv
  */
-public class Log {    
-    public boolean esLog(List Log){
-        if(Log.isEmpty()){
+
+
+
+public class Log{
+
+    public List log;
+    
+    public Log(){
+        this.log = new ArrayList();
+    }
+    
+    
+    public boolean esLog(List log){
+        this.log = log;
+        if(log.isEmpty()){
             return true;
         }
         else{
             try{
-            Iterator<String> iterator = Log.iterator();
+            Iterator<String> iterator = log.iterator();
             int i = 0;
             while (iterator.hasNext()) {
                 i++;
-                if(i > Log.size()){
+                if(i > log.size()){
                     break;
                     }
                 }
@@ -34,8 +46,17 @@ public class Log {
         }
     }
    
-    public List setLog(List Log, String Msg){
-       Log.add(Msg);
-       return Log;
-   }
+    public List setLog(List log, String Msg){
+       this.log = log;
+       log.add(Msg);
+       return log;
+    }
+    
+    public void saveLog(List Log){
+   
+    }
+   
+    public void loadLog(List Log){
+   
+    }
 }
