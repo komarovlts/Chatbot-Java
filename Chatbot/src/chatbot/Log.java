@@ -6,7 +6,7 @@
 package chatbot;
 
 import java.util.*;
-
+import java.io.*;
 /**
  *
  * @author Omar Antonio Carrasco Escudero - Kömarøv
@@ -53,7 +53,7 @@ public class Log{
     }
     
     public void saveLog(List Log){
-   
+        
     }
    
     public void loadLog(List Log){
