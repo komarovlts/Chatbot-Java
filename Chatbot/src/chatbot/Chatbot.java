@@ -14,24 +14,41 @@ import java.util.Scanner;
  * @author Omar Antonio Carrasco Escudero - KomarovLTS
  */
 public class Chatbot {
-    
+    //Campos de clase.
     Log log = new Log();
     Usuario nuevoUsuario = new Usuario();
     public List evaluaciones;
     public int personalidad;
     
+    /**
+     * Constructor de Chatbot.
+     * personalidad es un parametro entero que ronda entre 0 y 1, donde
+     * 0 implica que el chatbot tendrá una personalidad informal y
+     * 1 implica que el chatbot tendrá una personalidad formal.
+     * Por defecto el chatbot posee una personalidad formal. 
+     */
     public Chatbot() {
 	this.personalidad = 1;
         this.evaluaciones = new ArrayList();      
-    }
+    }//Cierre de constructor.
     
+    /**
+     * Método para cambiar la personalidad actual del Chatbot.
+     * @param personalidad, número entero que puede ser 0 y 1.
+     */
     public void setChatbot(int personalidad){
         this.personalidad = personalidad;
     }
     
+    /**
+     * Método que desarrolla la conversación a través de comandos específicos e
+     * indetificadores, este método sólo se detiene con el comando !stop, hasta
+     * que este comando no sea utilizado se seguirá dando al usuario la opción
+     * de ingresar datos por consola.
+     * @throws IOException, excepción de Input/Output derivada de ciertos submétodos.
+     */
     public void conversacion() throws IOException {
         
-	
 	Scanner lecturaConsolaConversacion = new Scanner(System.in);
         String mensajeUsuario = lecturaConsolaConversacion.nextLine();
         String mensaje;
@@ -245,7 +262,14 @@ public class Chatbot {
         mensajeUsuario = lecturaConsolaConversacion.nextLine();
         }
     }
-   
+    
+    /**
+     * Método de para el comando !beginDialog, el cual dará inicio a la
+     * conversación según los parametros dados (la personalidad y en su debido
+     * caso, la hora actual).
+     * @param seed, parametro entero que ronda entre 0 y 1 que es equivalente
+     * a la personalidad del Chatbot.
+     */
     public void beginDialog(int seed){
         Scanner lecturaConsolabeginDialog = new Scanner(System.in);
         int Hora = getHora();
@@ -280,6 +304,13 @@ public class Chatbot {
         log.addLog(log.log, "|Nombre|");       
     }
     
+    /**
+     * Método para el comando !endDialog el cual dará fin a la
+     * conversación según los parametros dados (la personalidad y en su debido
+     * caso, la hora actual).
+     * @param seed, parametro entero que ronda entre 0 y 1 que es equivalente
+     * a la personalidad del Chatbot. 
+     */
     public void endDialog(int seed){
         Scanner lecturaConsolaEndDialog = new Scanner(System.in);
         int Hora = getHora();
@@ -348,7 +379,14 @@ public class Chatbot {
         addDatosFinales();
         log.addLog(log.log, "|Chatbot evaluado|");
     }
-
+    
+    /**
+     * Método para añadir los metadatos de tiempo a otro String, uniéndoles como
+     * uno solo String.
+     * @param Msg, String al que se le añadirán los metadatos.
+     * @return String que contiene tanto como los metadatos, como el string dado
+     * como parametro.
+     */
     public String addMetaDatos(String Msg){
         String stringFinal;
         String tiempoActual = tiempoActual();
@@ -356,6 +394,11 @@ public class Chatbot {
         return stringFinal;
     }
     
+    /**
+     * Método que obtiene la fecha y la hora actual del equipo en un formato
+     * predefinido.
+     * @return String de metadatos de fecha y hora.
+     */
     public String tiempoActual(){
         DateTimeFormatter formatoTiempoActual = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime tiempoActualLocal = LocalDateTime.now();
@@ -364,13 +407,22 @@ public class Chatbot {
         return tiempoActual;
     }
     
+    /**
+     * Método que obtiene sólo la hora del equipo.
+     * @return entero equivalente a la hora del equipo.
+     */
     public int getHora(){
         Calendar calendario = Calendar.getInstance();
         int hora;
         hora = calendario.get(Calendar.HOUR_OF_DAY);
         return hora;
     }
-    
+    /**
+     * Método que añade datos útiles a el log.
+     * Nombre de usuario
+     * Personalidad del chatbot que interactuó con este usuario.
+     * Evaluación y auto evaluación del Chatbot.
+     */
     public void addDatosFinales(){
         log.addLog(log.log, "--------Datos Utiles--------");
         log.addLog(log.log, "----Usuario----");
@@ -382,4 +434,4 @@ public class Chatbot {
         log.addLog(log.log, (String) evaluaciones.get(1));
         log.addLog(log.log, "--------Fin Datos Utiles--------");
     }
-}
+}//Cierre de clase.
