@@ -1,0 +1,31 @@
+[2018/07/18 08:25:44] Chatbot: Buenos Dias, ¿Cuál es tu nombre?
+|Nombre|
+[2018/07/18 08:25:50] Usuario: Omar
+[2018/07/18 08:25:50] Chatbot: ¿Cómo estás Omar?
+|Respuesta1|
+[2018/07/18 08:25:52] Usuario: bien
+[2018/07/18 08:25:52] Chatbot: Oh, bueno. Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.
+|Respuesta2|
+[2018/07/18 08:25:54] Usuario: 1
+[2018/07/18 08:25:54] Chatbot: Perfecto, ¿Cuántas querrá?
+|Respuesta3|
+[2018/07/18 08:25:55] Usuario: 2
+[2018/07/18 08:25:55] Chatbot: Excelente, ¿Desea comprar algo más?
+|Respuesta4|
+[2018/07/18 08:26:02] Usuario: no
+[2018/07/18 08:26:02] Chatbot: ¡Está bien! Todos sus items han sido agregados a su carro.
+[2018/07/18 08:26:10] Chatbot: Espero haberte sido de utilidad, que tengas un buen día,¡Adiós!.
+|Fin de la Conversación|
+[2018/07/18 08:26:16] Evaluación de Chatbot: 5 
+[2018/07/18 08:26:16] Evaluación de Usuario: 1
+[2018/07/18 08:26:16] Chatbot: He sido evaluado exitosamente, ya puedes iniciar una nueva conversación.
+--------Datos Utiles--------
+----Usuario----
+Nombre: Omar
+----Chatbot----
+Personalidad: 1
+----Evaluaciones----
+Evaluación de Chatbot: 5 
+Evaluación de Usuario: 1
+--------Fin Datos Utiles--------
+|Chatbot evaluado|

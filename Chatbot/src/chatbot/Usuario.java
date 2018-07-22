@@ -7,8 +7,8 @@ package chatbot;
  */
 public class Usuario {
     //Campos de clase.
-    public String nombreUsuario;
-    public String pedidoUsuario;
+    private String nombreUsuario;
+    private String pedidoUsuario;
     
     /**
      * Constructor de Usuario.

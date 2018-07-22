@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 public class Log{
     
     //Campos de clase.
-    public List<String> log;
+    private List<String> log;
     /**
      * Constructor del Log.
      */
@@ -21,6 +21,13 @@ public class Log{
         this.log = new ArrayList();
     }//Cierre constructor.
     
+    /**
+     * Método para obtener el log actual.
+     * @return Lista de strings que representa el historial de la conversación.
+     */
+    public List<String> getLog(){
+        return log;
+    }
     /**
      * Método para comprobar que una lista efectivamente es un Log.
      * @param log, parametro a comprobar si es Log o no.
