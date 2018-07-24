@@ -15,10 +15,11 @@ import java.util.Scanner;
  */
 public class Chatbot {
     //Campos de clase.
+    private List evaluaciones;
+    private int personalidad;
+    
     Log log = new Log();
     Usuario nuevoUsuario = new Usuario();
-    public List evaluaciones;
-    public int personalidad;
     
     /**
      * Constructor de Chatbot.
@@ -42,7 +43,7 @@ public class Chatbot {
     
     /**
      * Método que desarrolla la conversación a través de comandos específicos e
-     * indetificadores, este método sólo se detiene con el comando !stop, hasta
+     * indentificadores, este método sólo se detiene con el comando !stop, hasta
      * que este comando no sea utilizado se seguirá dando al usuario la opción
      * de ingresar datos por consola.
      * @throws IOException, excepción de Input/Output derivada de ciertos submétodos.
@@ -345,6 +346,12 @@ public class Chatbot {
         log.addLog(log.getLog(), "|Fin de la Conversación|");
     }
     
+    /**
+     * Método que permite generar/guardar evualuaciones del usuario y del mismo chatbot
+     * dentro de una lista de evaluaciones.
+     * @param notaUsuario, parametro entero que representa la nota del usuario
+     * según su experiencia con el chatbot.
+     */
     public void rate(int notaUsuario){
         String tiempoActual = "Chatbot "+tiempoActual();
         int repeticiones = log.searchRepeticiones();

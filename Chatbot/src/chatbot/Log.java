@@ -22,13 +22,6 @@ public class Log{
     }//Cierre constructor.
     
     /**
-     * Método para obtener el log actual.
-     * @return Lista de strings que representa el historial de la conversación.
-     */
-    public List<String> getLog(){
-        return log;
-    }
-    /**
      * Método para comprobar que una lista efectivamente es un Log.
      * @param log, parametro a comprobar si es Log o no.
      * @return Booleano que ratifica si el parametro ingresado es Log.
@@ -55,6 +48,43 @@ public class Log{
 	    }
 	}
     }
+    
+    /**
+     * Método para obtener el log actual.
+     * @return Lista de strings que representa el historial de la conversación.
+     */
+    public List<String> getLog(){
+        return log;
+    }
+    
+        /**
+     * Método que adquiere el tiempo actual (Tiempo y fecha)según el computador
+     * en donde se ejecuta el programa en un formato predefinido.
+     * @return String que contiene metadatos de tiempo en formato predefinido.
+     */
+    public String getTiempo(){
+        DateTimeFormatter formatoTiempoActual = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm");
+        LocalDateTime tiempoActualLocal = LocalDateTime.now();
+        String tiempoActual;
+        tiempoActual = (formatoTiempoActual.format(tiempoActualLocal));
+        return tiempoActual;
+    }
+    
+    /**
+     * Método que adquiere el último String de el Log en cuestión.
+     * @param log, parametro objetivo de donde se obtiene el último elemento.
+     * @return String final del Log implicado.
+     */
+    public String getUltimo(List log){
+        String ultimoElemento;
+        if (log != null && !log.isEmpty()) {
+            ultimoElemento = (String) log.get(log.size()-1);
+        }
+        else{
+            ultimoElemento = "";
+        }
+        return ultimoElemento;
+    } 
     
     /**
      * Método que añade un String al Log.
@@ -94,7 +124,7 @@ public class Log{
     
     /**
      * Método que importa desde un archivo de texto a el Log actual, 
-     * reemplazandole.
+     * reemplazándole.
      * @param nombreArchivo, parametro que indica el nombre del archivo de 
      * texto con el Log a importar.
      * @throws IOException, excepción de tipo Input/Output. 
@@ -123,35 +153,6 @@ public class Log{
             }
         }
     }
-    
-    /**
-     * Método que adquiere el tiempo actual (Tiempo y fecha)según el computador
-     * en donde se ejecuta el programa en un formato predefinido.
-     * @return String que contiene metadatos de tiempo en formato predefinido.
-     */
-    public String getTiempo(){
-        DateTimeFormatter formatoTiempoActual = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm");
-        LocalDateTime tiempoActualLocal = LocalDateTime.now();
-        String tiempoActual;
-        tiempoActual = (formatoTiempoActual.format(tiempoActualLocal));
-        return tiempoActual;
-    }
-    
-    /**
-     * Método que adquiere el último String de el Log en cuestión.
-     * @param log, parametro objetivo de donde se obtiene el último elemento.
-     * @return String final del Log implicado.
-     */
-    public String getUltimo(List log){
-        String ultimoElemento;
-        if (log != null && !log.isEmpty()) {
-            ultimoElemento = (String) log.get(log.size()-1);
-        }
-        else{
-            ultimoElemento = "";
-        }
-        return ultimoElemento;
-    } 
     
     /**
      * Método que busca todas las repeticiones de un identificador en específico,
