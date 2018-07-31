@@ -1,6 +1,7 @@
 package chatbot;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Esta clase sólo realiza la instancia y llamada que da el paso a toda la 
@@ -15,8 +16,43 @@ import java.io.IOException;
 public class Main {
        
     public static void main(String[] args) throws IOException {
-        Chatbot nuevaConversacion = new Chatbot();
+        Dialog nuevaConversacion = new Dialog();
+        Log log = new Log();
         System.out.println("Este chatbot te ayuda a realizar un pedido de homocinéticas");
-        nuevaConversacion.conversacion();
+        Scanner lecturaConsolaConversacion = new Scanner(System.in);
+        String mensajeUsuario = lecturaConsolaConversacion.nextLine();
+            while(!"!stop".equals(mensajeUsuario)){                
+            if("!beginDialog 0".equals(mensajeUsuario) || "!beginDialog cero".equals(mensajeUsuario) ||
+	    "!beginDialog Cero".equals(mensajeUsuario) || "!beginDialog CERO".equals(mensajeUsuario)){
+                nuevaConversacion.conversacionNormal(0, log);
+                if(log.getUltimo(log.getLog()).equals("|Fin|")){
+                   return;
+                }
+            }
+            else if("!beginDialog 1".equals(mensajeUsuario) || "!beginDialog uno".equals(mensajeUsuario) ||
+               "!beginDialog Uno".equals(mensajeUsuario) || "!beginDialog UNO".equals(mensajeUsuario)){
+                nuevaConversacion.conversacionNormal(1, log);
+                if(log.getUltimo(log.getLog()).equals("|Fin|")){
+                   return;
+                }
+            }
+            else if("!beginDialog".equals(mensajeUsuario)){
+                nuevaConversacion.conversacionNormal(0, log);
+                if(log.getUltimo(log.getLog()).equals("|Fin|")){
+                   return;
+                }
+            }
+            //End beginDialog.
+            else if("!loadLog".equals(mensajeUsuario)){
+                System.out.println("Ingrese el nombre del archivo: ");
+                mensajeUsuario = lecturaConsolaConversacion.nextLine();
+                log.loadLog(mensajeUsuario);
+                nuevaConversacion.conversacionCargada(log);
+            }
+            else if("!saveLog".equals(mensajeUsuario)){
+                log.saveLog(log.getLog());
+            }
+            mensajeUsuario = lecturaConsolaConversacion.nextLine();   
+        }
     }	 
 }
