@@ -14,26 +14,30 @@ import java.util.Scanner;
  */
 public class Dialog {
     //Campos de clase.
-    
+    private boolean conversacionEnCurso;
     /**
      * Constructor del Dialog.
      */
     public Dialog(){
+        this.conversacionEnCurso = true;
     }
-    
-    public void iniciarConversación(){
-    
+    /**
+     * Método para cambiar de estado la conversación.
+     */
+    public void setOffDialog(){
+        conversacionEnCurso = false;
     }
     
     /** 
-    * Método que desarrolla la conversación a través de comandos específicos e
-    * indentificadores, este método sólo se detiene con el comando !stop, hasta
-    * que este comando no sea utilizado se seguirá dando al usuario la opción
-    * de ingresar datos por consola.
+     * Método que desarrolla la conversación a través de comandos específicos e
+     * indentificadores, este método sólo se detiene con el comando !stop, hasta
+     * que este comando no sea utilizado se seguirá dando al usuario la opción
+     * de ingresar datos por consola.
      * @param personalidadInicial
+     * @param log, lista de strings que representa el historial hasta el momento de la conversación.
      * @return log, lista de strings que representa el historial de la conversación.
-    * @throws IOException, excepción de Input/Output derivada de ciertos submétodos.
-    */
+     * @throws IOException, excepción de Input/Output derivada de ciertos submétodos.
+     */
     public Log conversacionNormal(int personalidadInicial, Log log) throws IOException {
         
         Usuario usuario = new Usuario();
@@ -268,14 +272,14 @@ public class Dialog {
     }
     
     /** 
-    * Método que desarrolla la conversación a través de comandos específicos e
-    * indentificadores, este método sólo se detiene con el comando !stop, hasta
-    * que este comando no sea utilizado se seguirá dando al usuario la opción
-    * de ingresar datos por consola.
+     * Método que desarrolla la conversación a través de comandos específicos e
+     * indentificadores, este método sólo se detiene con el comando !stop, hasta
+     * que este comando no sea utilizado se seguirá dando al usuario la opción
+     * de ingresar datos por consola.
      * @param log, lista de strings que representa el historial de la conversación cargada.
      * @return log, lista de strings que representa el historial de la conversación.
-    * @throws IOException, excepción de Input/Output derivada de ciertos submétodos.
-    */
+     * @throws IOException, excepción de Input/Output derivada de ciertos submétodos.
+     */
     public Log conversacionCargada(Log log) throws IOException {
         Usuario usuario = new Usuario();
         Chatbot chatbot = new Chatbot();

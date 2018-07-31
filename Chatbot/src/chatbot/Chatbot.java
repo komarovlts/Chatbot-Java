@@ -36,7 +36,10 @@ public class Chatbot {
     public void setChatbot(int personalidad){
         this.personalidad = personalidad;
     }
-    
+    /**
+     * Método para obtener la personalidad del Chatbot.
+     * @return personalidad del Chatbot representado por un entero, 1 o 0.
+     */
     public int getChatbot(){
         return personalidad;
     }
@@ -47,7 +50,7 @@ public class Chatbot {
      * caso, la hora actual).
      * @param seed, parametro entero que ronda entre 0 y 1 que es equivalente
      * a la personalidad del Chatbot.
-     * @param log, lista con el historial de la conversación.
+     * @param log, lista de strings con el historial de la conversación.
      */
     public void beginDialog(int seed, Log log){
         Scanner lecturaConsolabeginDialog = new Scanner(System.in);
@@ -89,7 +92,7 @@ public class Chatbot {
      * caso, la hora actual).
      * @param seed, parametro entero que ronda entre 0 y 1 que es equivalente
      * a la personalidad del Chatbot.
-     * @param log, lista con el historial de la conversación.
+     * @param log, lista de strings que representa el historial de la conversación.
      */
     public void endDialog(int seed, Log log){
         Scanner lecturaConsolaEndDialog = new Scanner(System.in);
@@ -130,7 +133,7 @@ public class Chatbot {
      * dentro de una lista de evaluaciones.
      * @param notaUsuario, parametro entero que representa la nota del usuario
      * según su experiencia con el chatbot.
-     * @param log, lista con el historial de la conversación.
+     * @param log, lista de strings que representa el historial de la conversación.
      */
     public void rate(int notaUsuario, Log log){
         String tiempoActual = "Chatbot "+tiempoActual();

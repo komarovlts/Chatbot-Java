@@ -57,7 +57,19 @@ public class Log{
         return log;
     }
     
-        /**
+    /**
+     * Método que añade un String al Log.
+     * @param log, parametro objetivo en donde se añadirá el String dado.
+     * @param Msg, parametro dado a añadir en un Log específico.
+     * @return Se devuelve el Log ya con el String añadido.
+     */
+    public List addLog(List log, String Msg){
+	this.log = log;
+	log.add(Msg);
+	return log;
+    }
+    
+    /**
      * Método que adquiere el tiempo actual (Tiempo y fecha)según el computador
      * en donde se ejecuta el programa en un formato predefinido.
      * @return String que contiene metadatos de tiempo en formato predefinido.
@@ -86,17 +98,6 @@ public class Log{
         return ultimoElemento;
     } 
     
-    /**
-     * Método que añade un String al Log.
-     * @param log, parametro objetivo en donde se añadirá el String dado.
-     * @param Msg, parametro dado a añadir en un Log específico.
-     * @return Se devuelve el Log ya con el String añadido.
-     */
-    public List addLog(List log, String Msg){
-	this.log = log;
-	log.add(Msg);
-	return log;
-    }
     
     /**
      * Método que exporta el Log a un archivo de texto .log

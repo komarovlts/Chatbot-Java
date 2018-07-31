@@ -26,20 +26,23 @@ public class Main {
 	    "!beginDialog Cero".equals(mensajeUsuario) || "!beginDialog CERO".equals(mensajeUsuario)){
                 nuevaConversacion.conversacionNormal(0, log);
                 if(log.getUltimo(log.getLog()).equals("|Fin|")){
-                   return;
+                    nuevaConversacion.setOffDialog();
+                    return;
                 }
             }
             else if("!beginDialog 1".equals(mensajeUsuario) || "!beginDialog uno".equals(mensajeUsuario) ||
                "!beginDialog Uno".equals(mensajeUsuario) || "!beginDialog UNO".equals(mensajeUsuario)){
                 nuevaConversacion.conversacionNormal(1, log);
                 if(log.getUltimo(log.getLog()).equals("|Fin|")){
-                   return;
+                    nuevaConversacion.setOffDialog();
+                    return;
                 }
             }
             else if("!beginDialog".equals(mensajeUsuario)){
                 nuevaConversacion.conversacionNormal(0, log);
                 if(log.getUltimo(log.getLog()).equals("|Fin|")){
-                   return;
+                    nuevaConversacion.setOffDialog();
+                    return;
                 }
             }
             //End beginDialog.
@@ -54,5 +57,6 @@ public class Main {
             }
             mensajeUsuario = lecturaConsolaConversacion.nextLine();   
         }
+        nuevaConversacion.setOffDialog();
     }	 
 }
