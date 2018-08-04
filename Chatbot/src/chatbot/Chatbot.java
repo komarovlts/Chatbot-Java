@@ -59,28 +59,28 @@ public class Chatbot {
         if(seed == 1){
             if(Hora >= 6 && Hora < 12){
                 saludo = addMetaDatos("Chatbot: Buenos Dias, ¿Cuál es tu nombre?");
-                System.out.println("Chatbot: Buenos Dias, ¿Cuál es tu nombre?");
+                System.out.println("Chatbot: Buenos Dias, ¿Cual es tu nombre?");
                 log.addLog(log.getLog(), saludo);
             }
             else if(Hora >= 12 && Hora < 20){
                 saludo = addMetaDatos("Chatbot: Buenas Tardes, ¿Cuál es tu nombre?");
-                System.out.println("Chatbot: Buenas Tardes, ¿Cuál es tu nombre?");
+                System.out.println("Chatbot: Buenas Tardes, ¿Cual es tu nombre?");
                 log.addLog(log.getLog(), saludo);
             }
             else if(Hora > 20){
                 saludo = addMetaDatos("Chatbot: Buenas Noches, ¿Cuál es tu nombre?");
-                System.out.println("Chatbot: Buenas Noches, ¿Cuál es tu nombre?");
+                System.out.println("Chatbot: Buenas Noches, ¿Cual es tu nombre?");
                 log.addLog(log.getLog(), saludo);
             }
             else{
                 saludo = addMetaDatos("Chatbot: Buenas, ¿Cuál es tu nombre?");
-                System.out.println("Chatbot: Buenas, ¿Cuál es tu nombre?");
+                System.out.println("Chatbot: Buenas, ¿Cual es tu nombre?");
                 log.addLog(log.getLog(), saludo);
             }
         }
         else{
             saludo = addMetaDatos("Chatbot: Buena!, Cómo te llamas?");
-            System.out.println("Chatbot: Buena!, Cómo te llamas?");
+            System.out.println("Chatbot: Buena!, Como te llamas?");
             log.addLog(log.getLog(), saludo);
         }
         log.addLog(log.getLog(), "|Nombre|");       
@@ -100,18 +100,18 @@ public class Chatbot {
         String despedida;
         if(seed == 1){
             if(Hora >= 6 && Hora < 12){
-                despedida = addMetaDatos("Chatbot: Espero haberte sido de utilidad, que tengas un buen día,¡Adiós!.");
-                System.out.println("Chatbot: Espero haberte sido de utilidad, que tengas un buen día,¡Adiós!.");
+                despedida = addMetaDatos("Chatbot: Espero haberte sido de utilidad, que tengas un buen dia,¡Adiós!.");
+                System.out.println("Chatbot: Espero haberte sido de utilidad, que tengas un buen dia,¡Adios!.");
                 log.addLog(log.getLog(), despedida);
             }
             else if(Hora >= 12 && Hora < 20){
                 despedida = addMetaDatos("Chatbot: Espero haberte sido de utilidad, que tengas una buena tarde,¡Adiós!.");
-                System.out.println("Chatbot: Espero haberte sido de utilidad, que tengas una buena tarde,¡Adiós!.");
+                System.out.println("Chatbot: Espero haberte sido de utilidad, que tengas una buena tarde,¡Adios!.");
                 log.addLog(log.getLog(), despedida);
             }
             else if(Hora > 20){
-                despedida = addMetaDatos("Chatbot: Espero haberte sido de utilidad, que tengas un buena noche,¡Adiós!.");
-                System.out.println("Chatbot: Espero haberte sido de utilidad, que tengas un buena noche,¡Adiós!.");
+                despedida = addMetaDatos("Chatbot: Espero haberte sido de utilidad, que tengas una buena noche,¡Adiós!.");
+                System.out.println("Chatbot: Espero haberte sido de utilidad, que tengas una buena noche,¡Adios!.");
                 log.addLog(log.getLog(), despedida);
             }
             else{
@@ -164,8 +164,8 @@ public class Chatbot {
         }
         evaluaciones.add("Evaluación de Usuario: " + notaUsuario);
         log.addLog(log.getLog(), addMetaDatos("Evaluación de Usuario: " + notaUsuario));
-        System.out.println("Chatbot: He sido evaluado exitosamente, ya puedes iniciar una nueva conversación.");
-        log.addLog(log.getLog(), addMetaDatos("Chatbot: He sido evaluado exitosamente, ya puedes iniciar una nueva conversación."));
+        log.addLog(log.getLog(), addMetaDatos("Chatbot: La evaluación se ha realizado existosamente, ya puedes iniciar una nueva conversación."));
+        System.out.println("Chatbot: La evaluacion se ha realizado existosamente, ya puedes iniciar una nueva conversacion.");
         log.addLog(log.getLog(), "|Chatbot evaluado|");
     }
     

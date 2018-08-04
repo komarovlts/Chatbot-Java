@@ -66,7 +66,7 @@ public class Dialog {
                 else{
                 ultimoMensaje = log.getUltimo(log.getLog());
                 mensaje = chatbot.addMetaDatos("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
-                System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
+                System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversacion anterior antes de comenzar una nueva.");
                 log.addLog(log.getLog(), mensaje);
                 log.addLog(log.getLog(), ultimoMensaje);
                 }
@@ -84,7 +84,7 @@ public class Dialog {
                 else{
                     ultimoMensaje = log.getUltimo(log.getLog());
                     mensaje = chatbot.addMetaDatos("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
-                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
+                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversacion anterior antes de comenzar una nueva.");
                     log.addLog(log.getLog(), mensaje);
                     log.addLog(log.getLog(), ultimoMensaje);
                 }
@@ -101,7 +101,7 @@ public class Dialog {
                 else{
                     ultimoMensaje = log.getUltimo(log.getLog());
                     mensaje = chatbot.addMetaDatos("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
-                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
+                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversacion anterior antes de comenzar una nueva.");
                     log.addLog(log.getLog(), mensaje);
                     log.addLog(log.getLog(), ultimoMensaje);
                 }
@@ -112,12 +112,12 @@ public class Dialog {
                 usuario.setNombreUsuario(mensajeUsuario);
                 if(chatbot.getChatbot() == 1){
                     mensaje = chatbot.addMetaDatos("Chatbot: ¿Cómo estás "+ mensajeUsuario +"?");
-                    System.out.println("Chatbot: ¿Cómo estás "+ mensajeUsuario +"?");
+                    System.out.println("Chatbot: ¿Cómo estas "+ mensajeUsuario +"?");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);
                 }
                 if(chatbot.getChatbot() == 0){
-                    mensaje = chatbot.addMetaDatos("Chatbot: ¿Cómo estás "+ mensajeUsuario +"?");
+                    mensaje = chatbot.addMetaDatos("Chatbot: ¿Cómo estai "+ mensajeUsuario +"?");
                     System.out.println("Chatbot: ¿Cómo estai "+ mensajeUsuario +"?");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);
@@ -130,7 +130,7 @@ public class Dialog {
             !"!rate 2".equals(mensajeUsuario) && !"!rate 3".equals(mensajeUsuario) && !"!rate 4".equals(mensajeUsuario) && !"!rate 5".equals(mensajeUsuario) && !"!endDialog".equals(mensajeUsuario) &&
             !"!saveLog".equals(mensajeUsuario) && !"!loadLog".equals(mensajeUsuario)){
                 mensaje = chatbot.addMetaDatos("Chatbot: Oh, bueno. Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
-                System.out.println("Chatbot: Oh, bueno. Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
+                System.out.println("Chatbot: Oh, bueno. Estos son las marcas/modelos de autos de las homocineticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
                 log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                 log.addLog(log.getLog(), mensaje);   
                 log.addLog(log.getLog(), "|Respuesta2|");     
@@ -141,7 +141,7 @@ public class Dialog {
             !"!rate 2".equals(mensajeUsuario) && !"!rate 3".equals(mensajeUsuario) && !"!rate 4".equals(mensajeUsuario) && !"!rate 5".equals(mensajeUsuario) && !"!endDialog".equals(mensajeUsuario) &&
             !"!saveLog".equals(mensajeUsuario) && !"!loadLog".equals(mensajeUsuario)){
                 mensaje = chatbot.addMetaDatos("Chatbot: Perfecto, ¿Cuántas querrá?");
-                System.out.println("Chatbot: Perfecto, ¿Cuántas querrá?");
+                System.out.println("Chatbot: Perfecto, ¿Cuantas querra?");
                 log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                 log.addLog(log.getLog(), mensaje);   
                 log.addLog(log.getLog(), "|Respuesta3|");     
@@ -152,7 +152,7 @@ public class Dialog {
             !"!rate 2".equals(mensajeUsuario) && !"!rate 3".equals(mensajeUsuario) && !"!rate 4".equals(mensajeUsuario) && !"!rate 5".equals(mensajeUsuario) && !"!endDialog".equals(mensajeUsuario) &&
             !"!saveLog".equals(mensajeUsuario) && !"!loadLog".equals(mensajeUsuario)){
                 mensaje = chatbot.addMetaDatos("Chatbot: Excelente, ¿Desea comprar algo más?");
-                System.out.println("Chatbot: Excelente, ¿Desea comprar algo más?");
+                System.out.println("Chatbot: Excelente, ¿Desea comprar algo mas?");
                 log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                 log.addLog(log.getLog(), mensaje);   
                 log.addLog(log.getLog(), "|Respuesta4|");     
@@ -323,7 +323,7 @@ public class Dialog {
                 else{
                     ultimoMensaje = log.getUltimo(log.getLog());
                     mensaje = chatbot.addMetaDatos("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
-                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
+                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversacion anterior antes de comenzar una nueva.");
                     log.addLog(log.getLog(), mensaje);
                     log.addLog(log.getLog(), ultimoMensaje);
                 }
@@ -340,7 +340,7 @@ public class Dialog {
                 else{
                     ultimoMensaje = log.getUltimo(log.getLog());
                     mensaje = chatbot.addMetaDatos("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
-                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversación anterior antes de comenzar una nueva.");
+                    System.out.println("Chatbot: Lo lamento, debes terminar y evaluar la conversacion anterior antes de comenzar una nueva.");
                     log.addLog(log.getLog(), mensaje);
                     log.addLog(log.getLog(), ultimoMensaje);
                 }
@@ -351,13 +351,13 @@ public class Dialog {
                 usuario.setNombreUsuario(mensajeUsuario);
                 if(chatbot.getChatbot() == 1){
                     mensaje = chatbot.addMetaDatos("Chatbot: ¿Cómo estás "+ mensajeUsuario +"?");
-                    System.out.println("Chatbot: ¿Cómo estás "+ mensajeUsuario +"?");
+                    System.out.println("Chatbot: ¿Como estas "+ mensajeUsuario +"?");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);
                 }
                 if(chatbot.getChatbot() == 0){
-                    mensaje = chatbot.addMetaDatos("Chatbot: ¿Cómo estás "+ mensajeUsuario +"?");
-                    System.out.println("Chatbot: ¿Cómo estai "+ mensajeUsuario +"?");
+                    mensaje = chatbot.addMetaDatos("Chatbot: ¿Cómo estai "+ mensajeUsuario +"?");
+                    System.out.println("Chatbot: ¿Como estai "+ mensajeUsuario +"?");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);
                 }
@@ -368,8 +368,8 @@ public class Dialog {
             !"!beginDialog Uno".equals(mensajeUsuario) && !"!beginDialog UNO".equals(mensajeUsuario) && !"!beginDialog".equals(mensajeUsuario) &&  !"!rate 1".equals(mensajeUsuario) &&
             !"!rate 2".equals(mensajeUsuario) && !"!rate 3".equals(mensajeUsuario) && !"!rate 4".equals(mensajeUsuario) && !"!rate 5".equals(mensajeUsuario) && !"!endDialog".equals(mensajeUsuario) &&
             !"!saveLog".equals(mensajeUsuario) && !"!loadLog".equals(mensajeUsuario)){
-                mensaje = chatbot.addMetaDatos("Chatbot: Oh, bueno. Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
-                System.out.println("Chatbot: Oh, bueno. Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
+                mensaje = chatbot.addMetaDatos("Chatbot: Oh, bueno. Estas son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
+                System.out.println("Chatbot: Oh, bueno. Estas son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
                 log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                 log.addLog(log.getLog(), mensaje);   
                 log.addLog(log.getLog(), "|Respuesta2|");     
@@ -380,7 +380,7 @@ public class Dialog {
             !"!rate 2".equals(mensajeUsuario) && !"!rate 3".equals(mensajeUsuario) && !"!rate 4".equals(mensajeUsuario) && !"!rate 5".equals(mensajeUsuario) && !"!endDialog".equals(mensajeUsuario) &&
             !"!saveLog".equals(mensajeUsuario) && !"!loadLog".equals(mensajeUsuario)){
                 mensaje = chatbot.addMetaDatos("Chatbot: Perfecto, ¿Cuántas querrá?");
-                System.out.println("Chatbot: Perfecto, ¿Cuántas querrá?");
+                System.out.println("Chatbot: Perfecto, ¿Cuantas querra?");
                 log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                 log.addLog(log.getLog(), mensaje);   
                 log.addLog(log.getLog(), "|Respuesta3|");     
@@ -391,7 +391,7 @@ public class Dialog {
             !"!rate 2".equals(mensajeUsuario) && !"!rate 3".equals(mensajeUsuario) && !"!rate 4".equals(mensajeUsuario) && !"!rate 5".equals(mensajeUsuario) && !"!endDialog".equals(mensajeUsuario) &&
             !"!saveLog".equals(mensajeUsuario) && !"!loadLog".equals(mensajeUsuario)){
                 mensaje = chatbot.addMetaDatos("Chatbot: Excelente, ¿Desea comprar algo más?");
-                System.out.println("Chatbot: Excelente, ¿Desea comprar algo más?");
+                System.out.println("Chatbot: Excelente, ¿Desea comprar algo mas?");
                 log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                 log.addLog(log.getLog(), mensaje);   
                 log.addLog(log.getLog(), "|Respuesta4|");     
@@ -405,8 +405,8 @@ public class Dialog {
                 || mensajeUsuario.equals("Sí, me gustaría comprar algo más") || mensajeUsuario.equals("Si, me gustaria comprar algo mas")
                 || mensajeUsuario.equals("sí, me gustaría comprar algo más") || mensajeUsuario.equals("si, me gustaria comprar algo mas"))
                 {
-                    mensaje = chatbot.addMetaDatos("Chatbot: ¡Okey! Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
-                    System.out.println("Chatbot: ¡Okey! Estos son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
+                    mensaje = chatbot.addMetaDatos("Chatbot: ¡Okey! Estas son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
+                    System.out.println("Chatbot: ¡Okey! Estas son las marcas/modelos de autos de las homocinéticas que disponemos: 1.-Toyota Rav4, 2.-Renault Duster, 3.-Hyundai Tucson, 4.-Nissan Qashqai, 5.-Nissan Kicks, elija la opción que desea.");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);
                     log.addLog(log.getLog(), "|Respuesta2|"); 
@@ -415,13 +415,13 @@ public class Dialog {
                 || mensajeUsuario.equals("No, no me gustaría comprar algo más") || mensajeUsuario.equals("no, no me gustaria comprar algo mas"))
                 {
                     mensaje = chatbot.addMetaDatos("Chatbot: ¡Está bien! Todos sus items han sido agregados a su carro.");
-                    System.out.println("Chatbot: ¡Está bien! Todos sus items han sido agregados a su carro.");
+                    System.out.println("Chatbot: ¡Esta bien! Todos sus items han sido agregados a su carro.");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);  
                 }
                 else{
                     mensaje = chatbot.addMetaDatos("Chatbot: Lo lamento, no logro entenderte, ¿Podrías repetirlo?");
-                    System.out.println("Chatbot: Lo lamento, no logro entenderte, ¿Podrías repetirlo?");
+                    System.out.println("Chatbot: Lo lamento, no logro entenderte, ¿Podrias repetirlo?");
                     log.addLog(log.getLog(), chatbot.addMetaDatos("Usuario: "+ mensajeUsuario));
                     log.addLog(log.getLog(), mensaje);
                     log.addLog(log.getLog(), "|Error|");
