@@ -133,10 +133,13 @@ public class Log{
     public void loadLog(String nombreArchivo) throws IOException{
         FileReader fr = null;
         BufferedReader br = null;
+        if(!nombreArchivo.contains(".log")){
+            nombreArchivo = nombreArchivo + ".log";
+        }
         try{	
-            fr = new FileReader (nombreArchivo+".log");
+            fr = new FileReader (nombreArchivo);
             br = new BufferedReader(fr);
-            System.out.println("Leyendo el contendio del archivo.txt");
+            System.out.println("Leyendo el contendio del archivo.log");
             this.log = new ArrayList();
             String linea;
 
@@ -145,7 +148,7 @@ public class Log{
             }
         }
         catch(IOException e){
-            System.out.println("El log no se ha podido cargar, por favor inténtelo nuevamente.");
+            System.out.println("El log no se ha podido cargar, por favor intentelo nuevamente.");
         }
         finally{
             if( null != fr ){

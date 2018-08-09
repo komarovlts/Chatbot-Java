@@ -18,13 +18,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Dialog nuevaConversacion = new Dialog();
         Log log = new Log();
-        System.out.println("Este chatbot te ayuda a realizar un pedido de homocinéticas");
+        System.out.println("Este chatbot te ayuda a realizar un pedido de homocineticas");
         Scanner lecturaConsolaConversacion = new Scanner(System.in);
         String mensajeUsuario = lecturaConsolaConversacion.nextLine();
             while(!"!stop".equals(mensajeUsuario)){                
-            if("!beginDialog 0".equals(mensajeUsuario) || "!beginDialog cero".equals(mensajeUsuario) ||
-	    "!beginDialog Cero".equals(mensajeUsuario) || "!beginDialog CERO".equals(mensajeUsuario)){
-                nuevaConversacion.conversacionNormal(0, log);
+                if("!beginDialog 0".equals(mensajeUsuario) || "!beginDialog cero".equals(mensajeUsuario) ||
+                    "!beginDialog Cero".equals(mensajeUsuario) || "!beginDialog CERO".equals(mensajeUsuario)){
+                     nuevaConversacion.conversacionNormal(0, log);
                 if(log.getUltimo(log.getLog()).equals("|Fin|")){
                     nuevaConversacion.setOffDialog();
                     return;
@@ -39,18 +39,21 @@ public class Main {
                 }
             }
             else if("!beginDialog".equals(mensajeUsuario)){
-                nuevaConversacion.conversacionNormal(0, log);
+                nuevaConversacion.conversacionNormal(1, log);
                 if(log.getUltimo(log.getLog()).equals("|Fin|")){
                     nuevaConversacion.setOffDialog();
                     return;
                 }
             }
             //End beginDialog.
-            else if("!loadLog".equals(mensajeUsuario)){
-                System.out.println("Ingrese el nombre del archivo: ");
-                mensajeUsuario = lecturaConsolaConversacion.nextLine();
-                log.loadLog(mensajeUsuario);
-                nuevaConversacion.conversacionCargada(log);
+            else if(mensajeUsuario.contains("!loadLog")){
+                try{
+                    String[] separacion = mensajeUsuario.split(" ");
+                    String nombreArchivo = separacion[1]; 
+                    log.loadLog(nombreArchivo);
+                }catch(ArrayIndexOutOfBoundsException error){
+                    System.out.println("Ups, creo que olvido poner el nombre del archivo.");
+                }   
             }
             else if("!saveLog".equals(mensajeUsuario)){
                 log.saveLog(log.getLog());
